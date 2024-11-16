@@ -1,0 +1,173 @@
+/* Navbar Container */
+.navbar {
+    background-color: #005EFF;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Navbar Content */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    height: 60px;
+}
+
+/* Top Actions (Unilever Pakistan text for large screens) */
+.top-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.top-actions a {
+    text-decoration: none;
+    color: white;
+    background-color: #001170;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.desktop-search {
+    display: block; /* Visible only for large screens */
+}
+
+/* Navbar Links (Large Screens) */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar-links li a {
+    color: white;
+    
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: lightblue; /* Hover effect */
+    text-decoration: none;
+}
+
+/* Mobile Icons (Search & Menu Button for Small Screens) */
+.mobile-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ensure space between search and menu button */
+    justify-content: flex-end;
+}
+
+.mobile-icons .search-icon {
+    display: none; /* Hidden by default */
+    background-color: #001170;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* Menu Button */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 15; /* Ensure it’s above the mobile menu */
+    gap:5px;
+}
+.menu-button span{
+    font-size: 14px;
+    font-weight: bold;
+}
+.search-span{
+    margin-right: 10px;
+}
+/* Mobile Menu */
+.navbar-mobile-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #005EFF;
+    height: 100%;
+    width: 75%;
+    max-width: 300px;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    margin-top: 20px;
+}
+
+.navbar-mobile-links.open {
+    transform: translateX(0);
+    display: flex;
+}
+
+.navbar-mobile-links li {
+    list-style: none;
+    margin-bottom: 20px;
+    
+}
+
+.navbar-mobile-links li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+   
+}
+
+.navbar-mobile-links li a:hover {
+    color: lightblue; /* Hover effect */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* Top Actions - Hide for Small Screens */
+    .top-actions span {
+        display: none;
+    }
+
+    /* Hide Navbar Links for Small Screens */
+    .navbar-links {
+        display: none;
+    }
+
+    /* Show Menu Button for Small Screens */
+    .menu-button {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .menu-button span{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .menu-button:hover{
+        border : 1px solid black;
+        outline: 2px solid  rgba(255, 166, 0, 0.76);
+    }
+    /* Hide Desktop Search Icon on Small Screens */
+    .desktop-search {
+        display: none;
+    }
+
+    /* Ensure Mobile Search Icon is Visible */
+    .mobile-icons .search-icon {
+        display: block; /* Visible only for small screens */
+    }
+}

@@ -1,0 +1,132 @@
+.brand-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  gap: 2rem; /* Adds space between elements on wrap */
+}
+
+.brand-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-width: 60%;
+  margin-left: 3rem; /* Adds margin to move heading closer to the image */
+}
+
+.brand-heading span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  font-weight:900;
+  
+}
+
+.blue-span {
+  color: blue;
+}
+
+.purple-span {
+  color:rgb(109, 14, 109);
+}
+
+.red-span {
+  color: rgb(214, 18, 110);
+}
+
+.explore-brand {
+  margin-top: 1rem;
+}
+
+.explore-brand button {
+  background-color:#87f1e9 ;
+  color:rgb(109, 14, 109);
+  font-size: 2rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+
+.explore-brand button:hover {
+  background-color:rgb(109, 14, 109);
+  color: #87f1e9;
+}
+.explore-brand span{
+  font-size: 14px;
+}
+.brand-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .brand-container {
+    padding: 1.5rem;
+  }
+
+  .brand-heading {
+    max-width: 60%; /* Adjust heading width for tablets */
+  }
+
+  .brand-heading span {
+    font-size: 1.3rem;
+  }
+
+  .explore-brand button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-container {
+    flex-direction: column;
+    align-items: center; /* Center-align elements on small screens */
+  }
+
+  .brand-heading {
+    max-width: 100%; /* Full-width heading for smaller devices */
+    text-align: center;
+    margin-right: 0; /* Remove margin for centered layout */
+  }
+
+  .explore-brand {
+    margin-top: 1.5rem;
+  }
+
+  .brand-image img {
+    max-width: 80%; /* Reduce image size for smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+ 
+  .brand-heading{
+    margin: 0;
+  }
+  .brand-heading span {
+    font-size: 1.1rem; /* Smaller text for very small screens */
+  }
+
+  .explore-brand button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .brand-image img {
+    max-width: 100%;
+   margin: 0 auto;
+  }
+}

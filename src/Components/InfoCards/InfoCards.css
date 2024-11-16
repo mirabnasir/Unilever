@@ -1,0 +1,112 @@
+/* Container styling */
+.info-cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual card styling */
+.info-card {
+  background-color: #F0F0F0;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling */
+.info-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Title styling */
+.info-card-title {
+  font-size: 1.2em;
+  margin: 16px;
+  font-weight: bolder;
+  color: #005EFF;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+
+
+/* Description styling */
+.info-card-description {
+  color: #555;
+  font-size: 1em;
+  margin: 0 16px 16px;
+}
+.search-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F0F0F0;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+.search-container h1{
+  color:#005EFF;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; /* Make the search bar full width */
+  margin: 0 auto; /* Center the search bar */
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.search-bar button {
+  background-color:#005EFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .info-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+    h1 {
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+    .search-bar {
+      width: 100%;
+      max-width: 300px; /* Adjust maximum width for smaller screens */
+    }
+  
+}
